@@ -1,16 +1,14 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/signup",
-        "dest": "/server.js"
-      }
-    ]
-  }
-  
+  "builds": [
+    {
+      "src": "server.js", // Replace with your entry point
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js" // Replace with your entry point
+    }
+  ]
+}
